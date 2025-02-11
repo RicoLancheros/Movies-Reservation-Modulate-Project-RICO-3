@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  userdb:
+    image: mysql:8.0
+    container_name: userdb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: userdb
+    ports:
+      - "3306:3306"
+
+  user-service:
+    build:
+      context: ./services/microservices-java/user-service
+      dockerfile: ../DB/DB-user-service/Dockerfile
+    container_name: user-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - userdb
