@@ -12,7 +12,7 @@ services:
   user-service:
     build:
       context: ./services/microservices-java/user-service
-      dockerfile: ../DB/DB-user-service/Dockerfile
+      dockerfile: ./Dockerfile
     container_name: user-service
     ports:
       - "8081:8081"
