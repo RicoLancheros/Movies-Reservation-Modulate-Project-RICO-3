@@ -9,6 +9,7 @@ import javax.persistence.Id;
 @Entity
 public class User {
 
+    //se define el id como clave primaria y se genera automaticamente
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

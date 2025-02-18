@@ -7,10 +7,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//aqui se define el controlador de la aplicacion
 @RestController
 @RequestMapping("/users")
 public class UserController {
 
+    //se inyecta el servicio de usuarios
     @Autowired
     private UserService userService;
 
